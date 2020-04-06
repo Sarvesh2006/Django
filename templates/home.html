@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h1>Add</h1>
+<form action="add" method="POST">
+    {% csrf_token %}
+    Enter 1st number: <input type="text" name="num1"><br> 
+    Enter 2nd number: <input type="text" name="num2"><br>
+    <input type="submit" value="Add">
+</form>
+
+    <br>
+
+<h1>Multiply</h1>
+<form action="multiply" method="POST">
+    {% csrf_token %}
+    Enter 1st number: <input type="text" name="val1"><br> 
+    Enter 2nd number: <input type="text" name="val2"><br>
+    <input type="submit" value="Multiply">
+</form>
+
+<br>
+
+<h1>Divide</h1>
+<form action="divide" method="POST">
+    {% csrf_token %}
+    Enter 1st number: <input type="text" name="con1"><br> 
+    Enter 2nd number: <input type="text" name="con2"><br>
+    <input type="submit" value="Divide">
+</form>
+
+
+{% endblock %}
